@@ -45,9 +45,5 @@ describe('Utils', () => {
     it('should square negatives floats', () =>
       assert.equal(square(-0.8), 0.64))
   })
-
-  describe('convertSI', () => {
-    it
-  })
 })
 

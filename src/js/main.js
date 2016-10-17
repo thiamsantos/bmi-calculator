@@ -6,6 +6,8 @@ const weightInput = $('#weight')
 
 const heightInput = $('#height')
 
+const unitOptionsLabel = document.querySelectorAll('.unit-options-label')
+
 const resultValue = $('.result__value')
 
 const resultStatus = $('.result__status')
@@ -49,8 +51,8 @@ const addUnitsToLabel = units => {
 const showResult = () => {
   if (!typedWeight() || !typedHeight()) {
     if (resultValue.textContent !== '') {
-      resultValue.textContent = ''
-      resultStatus.textContent = ''
+      resultValue.textContent = '0.0'
+      resultStatus.textContent = 'Normal'
     }
     return false
   }
@@ -61,6 +63,13 @@ const showResult = () => {
   resultStatus.textContent = getBmiStatus(bmi)
 }
 
+const clickWhenEnter = e => {
+  const target = e.target.getAttribute('for')
+  if (e.key === 'Enter') {
+    $(`#${target}`).click()
+  }
+}
+
 const showUnits = () => {
   showResult()
   addUnitsToLabel(typeOfUnits())
@@ -68,6 +77,9 @@ const showUnits = () => {
 
 weightInput.addEventListener('input', showResult)
 heightInput.addEventListener('input', showResult)
+
+unitOptionsLabel
+  .forEach(node => node.addEventListener('keyup', clickWhenEnter))
 
 document
   .querySelectorAll('.unit-options')

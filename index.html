@@ -15,23 +15,23 @@
     <p class="unit">Measure units:</p>
 
     <input class="unit-options" type="radio" id="si" name="unit" value="si" checked>
-    <label class="unit-options-label" for="si">Kg/m</label>
+    <label class="unit-options-label focusable" for="si" tabindex="0">Kg/m</label>
     <input class="unit-options" type="radio" id="us" name="unit" value="us">
-    <label class="unit-options-label" for="us">Lbs/in</label>
+    <label class="unit-options-label focusable" for="us" tabindex="0">Lbs/in</label>
 
     <div class="text-field">
-      <input class="text-field__input" type="text" id="weight" pattern="^[0-9]*(\.[0-9]*)?$" required>
+      <input class="text-field__input" type="text" id="weight" pattern="^[0-9]*(\.[0-9]*)?$" required  tabindex="0">
       <label class="text-field__label" for="weight">Weight <span id="weight-unit"></span></label>
     </div>
 
     <div class="text-field">
-      <input class="text-field__input" type="text" id="height" pattern="^[0-9]*(\.[0-9]*)?$" required>
+      <input class="text-field__input" type="text" id="height" pattern="^[0-9]*(\.[0-9]*)?$" required tabindex="0">
       <label class="text-field__label" for="height">Height <span id="height-unit"></span></label>
     </div>
 
-    <div class="result">
-      <p class="result__value"></p>
-      <p class="result__status"></p>
+    <div class="result focusable" tabindex="0" title="Result">
+      <p class="result__value">0.0</p>
+      <p class="result__status">Normal</p>
     </div>
   </main>
   <script src="dist/main.js" defer></script>
