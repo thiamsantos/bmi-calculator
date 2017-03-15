@@ -1,6 +1,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 # bmi-calculator
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/thiamsantos/bmi-calculator.svg)](https://greenkeeper.io/)
 A simple BMI calculator build with functional js programming.
 
 ## Commands
